@@ -43,6 +43,12 @@ export default class Vote extends Component {
     }
   };
   render() {
+    let classLike =
+      this.state.status === "like" ? "liked like-button" : "like-button";
+    let classDislike =
+      this.state.status === "dislike"
+        ? "disliked dislike-button"
+        : "dislike-button";
     const PLACEHOLDER_IMAGE =
       "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg";
     return (
@@ -55,11 +61,11 @@ export default class Vote extends Component {
             alt={`The movie titled: Avengers: Endgame`}
           />
         </div>
-        <button onClick={this.incrementLike}>
+        <button className={classLike} onClick={this.incrementLike}>
           <FontAwesomeIcon icon={faThumbsUp} /> |{" "}
           <span className="likes-counter">{this.state.like}</span>
         </button>
-        <button onClick={this.incrementDislike}>
+        <button className={classDislike} onClick={this.incrementDislike}>
           <FontAwesomeIcon icon={faThumbsDown} /> |{" "}
           <span className="dislikes-counter">{this.state.dislike}</span>
         </button>

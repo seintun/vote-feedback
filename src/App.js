@@ -7,6 +7,10 @@ class App extends Component {
     return (
       <div className="App">
         <Vote />
+        <p>
+          Created with <span role="img">💖</span> by
+          <a href="https://www.linkedin.com/in/seintun"> Sein Tun</a>
+        </p>
       </div>
     );
   }

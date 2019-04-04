@@ -1,0 +1,49 @@
+.post {
+  background-color: lightgrey;
+  border: 5px solid grey;
+  width: 250px;
+  padding: 10px;
+  margin: 25px;
+}
+
+p {
+  text-align: center
+}
+
+.like-button,
+.dislike-button {
+  border-radius: 20px;
+  border: 1px solid lightseagreen;
+  background-color: lightseagreen;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px;
+  margin: 5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+.liked {
+  font-weight: bold;
+  color: #1565c0;
+}
+
+.disliked {
+  font-weight: bold;
+  color: red;
+}
